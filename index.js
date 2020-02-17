@@ -26,10 +26,15 @@ function printString(myString) {
   function isPalindrome(myString){
     str = myString.toLowerCase();
     if(str.length === 1){
-      return true;
+      return true;//returns 'true' when a string is a palindrome
     }else if(str[0] !== str[str.length-1]){
-      return false;
+      return false;//returns 'false' when a string is not a palindrome
     }
-      return isPalindrome(str.slice(1,-1));
+      return isPalindrome(str.slice(1,-1));//makes the proper recursive calls
   }
+  
+  function addUpTo(myArray, index) {
+    return index ? myArray[index] + addUpTo(myArray, --index) : myArray[index];
+  }
+  
   
